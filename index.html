@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASPHALT LEGENDS - DRNH Club Official</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+
+    <style>
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: #0b0716;
+            color: #f1f5f9;
+        }
+
+        .font-racing {
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        /* Neon Glow Effects */
+        .neon-border-purple {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+            border: 1px solid rgba(192, 132, 252, 0.4);
+        }
+        
+        .neon-text-purple {
+            text-shadow: 0 0 12px rgba(216, 180, 254, 0.7), 0 0 25px rgba(168, 85, 247, 0.5);
+        }
+
+        .neon-btn-discord {
+            background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+        }
+        .neon-btn-discord:hover {
+            box-shadow: 0 0 30px rgba(88, 101, 242, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .neon-btn-youtube {
+            background: linear-gradient(135deg, #FF0000 0%, #C40000 100%);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+        .neon-btn-youtube:hover {
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+            transform: translateY(-2px);
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(22, 14, 43, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0716;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7e22ce;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-purple-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-purple-700 to-fuchsia-500 flex items-center justify-center shadow-lg font-racing text-2xl font-black text-white">
+                    DR
+                </div>
+                <div>
+                    <span class="font-racing text-2xl font-bold tracking-wider text-white">DRNH</span>
+                    <span class="text-[10px] block text-purple-300 font-bold -mt-2 tracking-widest uppercase">Asphalt Legends Club</span>
+                </div>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-wider text-slate-300">
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+                <a href="#requirements" class="hover:text-purple-400 transition">Requirements</a>
+                <a href="#quiz" class="hover:text-purple-400 transition">Eligibility Check</a>
+                <a href="#join" class="hover:text-purple-400 transition">Join Us</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-t border-purple-900/40 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-sm font-bold uppercase tracking-wider text-slate-300 hover:text-purple-400">About</a>
+            <a href="#requirements" class="block text-sm font-bold uppercase tracking-wider text-slate-300 hover:text-purple-400">Requirements</a>
+            <a href="#quiz" class="block text-sm font-bold uppercase tracking-wider text-slate-300 hover:text-purple-400">Eligibility Check</a>
+            <a href="#join" class="block text-sm font-bold uppercase tracking-wider text-purple-400">Join Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden flex items-center justify-center">
+        <!-- Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/20 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-8 text-center relative z-10">
+            
+            <!-- Main Hero Image Banner Box -->
+            <div class="rounded-3xl overflow-hidden neon-border-purple shadow-2xl bg-slate-950/80 relative group">
+                <!-- Fallback Banner Representation matching the provided image design -->
+                <div class="w-full aspect-[21/9] sm:aspect-[3/1] bg-gradient-to-r from-purple-950 via-slate-950 to-purple-950 flex flex-col items-center justify-center p-6 relative overflow-hidden">
+                    
+                    <!-- Neon Grid & Palm Trees Pattern Overlay -->
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,70,239,0.15)_0,transparent_70%)] pointer-events-none"></div>
+                    
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 z-10">
+                        <!-- Shield Logo & ASPHALT LEGENDS -->
+                        <div class="flex flex-col items-center md:items-end">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 mb-2 border-4 border-white flex items-center justify-center transform -skew-x-12 bg-gradient-to-br from-purple-600 to-indigo-950 shadow-lg">
+                                <span class="font-racing text-4xl sm:text-5xl font-black text-white tracking-tighter italic">7</span>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <span class="font-racing text-2xl sm:text-4xl lg:text-5xl font-bold tracking-widest text-white leading-none block">
+                                    ASPHALT
+                                </span>
+                                <span class="font-racing text-lg sm:text-2xl lg:text-3xl font-bold tracking-[0.3em] text-purple-300 leading-none block">
+                                    LEGENDS
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Divider Line -->
+                        <div class="hidden md:block w-1 h-20 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-60"></div>
+
+                        <!-- DRNH Neon Logo -->
+                        <div class="text-center md:text-left">
+                            <h1 class="font-racing text-6xl sm:text-8xl lg:text-9xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-white neon-text-purple">
+                                DRNH
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Small hint for uploading custom banner -->
+                    <div class="absolute bottom-2 right-4 text-[10px] text-slate-400 opacity-60">
+                    </div>
+                </div>
+
+                <!-- Custom Header Image Dynamic Loader (If IMG_0114.jpeg / header.jpg exists) -->
+                <img id="customHeaderImg" src="header.jpg" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover z-20" alt="DRNH Asphalt Legends Header">
+            </div>
+
+            <!-- Hero Intro Text -->
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-card border border-purple-500/40 text-purple-300 text-xs font-bold uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>ACTIVE MEMBERS WANTED</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                    頂点を目指すレーサー集団<br class="hidden sm:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400">CLUB DRNH</span> へようこそ
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Asphalt Legends で共にクラブシーズン報酬の完走、マルチプレイでの高みを目指す精鋭クラブです。
+                    モチベーションの高いドライバーを常時募集しています。
+                </p>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <a href="#join" class="neon-btn-discord px-8 py-4 rounded-2xl text-white font-black text-base uppercase tracking-wider flex items-center space-x-3 transition">
+                    <i class="fa-brands fa-discord text-xl"></i>
+                    <span>Discordに参加して入隊申請</span>
+                </a>
+                <a href="#quiz" class="glass-card hover:bg-purple-900/30 px-8 py-4 rounded-2xl text-purple-200 font-bold text-base uppercase tracking-wider border border-purple-500/30 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <span>入隊チェックを行う</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-slate-950/60 border-y border-purple-900/30 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <h3 class="font-racing text-4xl font-bold tracking-wider text-purple-400 uppercase">ABOUT US</h3>
+                <h4 class="text-2xl font-extrabold text-white">クラブの活動内容 & 特徴</h4>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-purple-500/50 transition">
+                    <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 text-2xl">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h5 class="text-xl font-bold text-white">マイルストーン全開放</h5>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        毎シーズンのクラブマイルストーン報酬（インポートパーツ・設計図・トークン）を確実に全獲得することを目標に活動しています。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-purple-500/50 transition">
+                    <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 text-2xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h5 class="text-xl font-bold text-white">アクティブな交流</h5>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Discordサーバー内ではマルチプレイの部屋立て、クラッシュ攻略、ショートカット情報などの攻略情報の共有が盛んです。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-purple-500/50 transition">
+                    <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 text-2xl">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h5 class="text-xl font-bold text-white">エンジョイ & ガチの融合</h5>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        リアル優先を前提としつつ、走るときは全力で走るメリハリのある環境。初心者からベテランまで向上心のある方を歓迎します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <h3 class="font-racing text-4xl font-bold tracking-wider text-purple-400 uppercase">REQUIREMENTS</h3>
+                <h4 class="text-2xl font-extrabold text-white">入隊条件・ノルマ</h4>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Requirements List -->
+                <div class="glass-card rounded-3xl p-8 space-y-6 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3 text-purple-300 border-b border-purple-900/50 pb-4">
+                            <i class="fa-solid fa-list-check text-2xl"></i>
+                            <span class="font-bold text-lg uppercase tracking-wider text-white">基本ルール & 募集条件</span>
+                        </div>
+
+                        <ul class="space-y-4">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">1</div>
+                                <div>
+                                    <strong class="text-white block text-sm">ガレージレベル (GL) 12 以上</strong>
+                                    <span class="text-xs text-slate-400">主要なマシンが揃い始めているレベルを目安としています。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">2</div>
+                                <div>
+                                    <strong class="text-white block text-sm">週あたりの名声ポイント (Rep) 30,000 以上</strong>
+                                    <span class="text-xs text-slate-400">デイリーイベントやマルチプレイで安定して獲得できる方を優先します。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">3</div>
+                                <div>
+                                    <strong class="text-white block text-sm">Discordへの参加＆連絡が可能</strong>
+                                    <span class="text-xs text-slate-400">クラブ内連絡や事前連絡（長期間イン不可時の連絡等）のため必須です。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">4</div>
+                                <div>
+                                    <strong class="text-white block text-sm">マナーとモラルの遵守</strong>
+                                    <span class="text-xs text-slate-400">煽り行為やチート行為の禁止。互いにリスペクトを持ってプレイしましょう。</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-purple-900/30 border border-purple-500/30 text-xs text-purple-200">
+                        ※ 事前に連絡をいただければ、試験休みや多忙期間中のノルマ免除制度もあります。
+                    </div>
+                </div>
+
+                <!-- Status Stats Box -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-center space-y-8 neon-border-purple relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <h5 class="text-center font-racing text-3xl font-bold tracking-wider text-white">DRNH CLUB TARGETS</h5>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-900/80 rounded-2xl p-5 text-center border border-purple-900/40">
+                            <span class="text-xs font-bold text-slate-400 block uppercase">Weekly Goal</span>
+                            <span class="font-racing text-4xl font-black text-purple-400">30k+</span>
+                            <span class="text-[11px] text-slate-500 block">Rep Points / Player</span>
+                        </div>
+                        <div class="bg-slate-900/80 rounded-2xl p-5 text-center border border-purple-900/40">
+                            <span class="text-xs font-bold text-slate-400 block uppercase">Club Rank</span>
+                            <span class="font-racing text-4xl font-black text-fuchsia-400">TOP 200</span>
+                            <span class="text-[11px] text-slate-500 block">Global Leaderboard</span>
+                        </div>
+                        <div class="bg-slate-900/80 rounded-2xl p-5 text-center border border-purple-900/40">
+                            <span class="text-xs font-bold text-slate-400 block uppercase">Clash Goal</span>
+                            <span class="font-racing text-4xl font-black text-amber-400">TOP 10%</span>
+                            <span class="text-[11px] text-slate-500 block">Club Clash Season</span>
+                        </div>
+                        <div class="bg-slate-900/80 rounded-2xl p-5 text-center border border-purple-900/40">
+                            <span class="text-xs font-bold text-slate-400 block uppercase">Communication</span>
+                            <span class="font-racing text-4xl font-black text-indigo-400">DISCORD</span>
+                            <span class="text-[11px] text-slate-500 block">Voice & Text</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Membership Eligibility Quiz -->
+    <section id="quiz" class="py-16 bg-slate-950/80 border-t border-purple-900/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 space-y-2">
+                <h3 class="font-racing text-4xl font-bold tracking-wider text-purple-400 uppercase">ELIGIBILITY CHECK</h3>
+                <h4 class="text-2xl font-extrabold text-white">入隊適正診断</h4>
+                <p class="text-slate-400 text-sm">あなたの現在のプレイ状況を選択して、DRNHへの参加条件を満たしているかチェックしてみましょう！</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 sm:p-10 space-y-8 neon-border-purple">
+                <form id="quizForm" class="space-y-6">
+                    <!-- Field 1: Garage Level -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-purple-300">1. あなたのガレージレベル (Garage Level)</label>
+                        <select id="quizGl" class="w-full bg-slate-900 border border-purple-700/60 rounded-xl p-3 text-sm font-medium text-slate-200 focus:outline-none focus:border-purple-500">
+                            <option value="10">Lv. 1 - 11</option>
+                            <option value="12" selected>Lv. 12 - 15</option>
+                            <option value="16">Lv. 16 - 19</option>
+                            <option value="20">Lv. 20 以上</option>
+                        </select>
+                    </div>
+
+                    <!-- Field 2: Weekly Rep Points -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-purple-300">2. 1週間で稼げる名声ポイント (Reputation Points)</label>
+                        <select id="quizRep" class="w-full bg-slate-900 border border-purple-700/60 rounded-xl p-3 text-sm font-medium text-slate-200 focus:outline-none focus:border-purple-500">
+                            <option value="15000">15,000 Rep 未満</option>
+                            <option value="30000" selected>30,000 - 49,999 Rep</option>
+                            <option value="50000">50,000 - 99,999 Rep</option>
+                            <option value="100000">100,000 Rep 以上</option>
+                        </select>
+                    </div>
+
+                    <!-- Field 3: Discord Availability -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-purple-300">3. Discordでのやり取り・連携は可能ですか？</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="flex items-center space-x-3 bg-slate-900 border border-purple-900/60 p-3 rounded-xl cursor-pointer">
+                                <input type="radio" name="quizDiscord" value="yes" checked class="accent-purple-500">
+                                <span class="text-sm font-bold text-white">可能 (Yes)</span>
+                            </label>
+                            <label class="flex items-center space-x-3 bg-slate-900 border border-purple-900/60 p-3 rounded-xl cursor-pointer">
+                                <input type="radio" name="quizDiscord" value="no" class="accent-purple-500">
+                                <span class="text-sm font-bold text-white">難しい (No)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white font-black text-base uppercase tracking-wider shadow-lg transition">
+                        診断結果を表示する
+                    </button>
+                </form>
+
+                <!-- Result Box (Hidden by default) -->
+                <div id="quizResult" class="hidden rounded-2xl p-6 text-center space-y-4 border transition-all duration-300">
+                    <div id="resultIcon" class="text-4xl"></div>
+                    <h5 id="resultTitle" class="text-2xl font-black"></h5>
+                    <p id="resultDesc" class="text-sm leading-relaxed"></p>
+                    <div id="resultAction" class="pt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join CTA & Social Links -->
+    <section id="join" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8 relative z-10">
+            
+            <div class="space-y-3">
+                <span class="font-racing text-3xl font-bold tracking-wider text-purple-400 uppercase">JOIN CLUB DRNH</span>
+                <h3 class="text-3xl sm:text-5xl font-black text-white">仲間と共にサーキットを駆け抜けよう</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    入隊をご希望の方、または質問がある方は公式Discordサーバーにお越しください。
+                    サーバー内の「#入隊申請」チャンネルにてゲーム内IDのスクリーンショットを添えてご連絡をお待ちしております！
+                </p>
+            </div>
+
+            <!-- Social CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 max-w-xl mx-auto pt-4">
+                
+                <!-- Discord Button -->
+                <a href="https://discord.gg/your-invite-code" target="_blank" class="w-full sm:w-1/2 neon-btn-discord py-5 px-6 rounded-2xl text-white font-black text-lg uppercase tracking-wider flex items-center justify-center space-x-3">
+                    <i class="fa-brands fa-discord text-2xl"></i>
+                    <span>Discord サーバー</span>
+                </a>
+
+                <!-- YouTube Channel Button -->
+                <a href="https://youtube.com" target="_blank" class="w-full sm:w-1/2 neon-btn-youtube py-5 px-6 rounded-2xl text-white font-black text-lg uppercase tracking-wider flex items-center justify-center space-x-3">
+                    <i class="fa-brands fa-youtube text-2xl"></i>
+                    <span>YouTube チャンネル</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 bg-slate-950 border-t border-purple-900/40 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="font-racing text-xl font-bold text-white tracking-wider">ASPHALT LEGENDS</span>
+                <span class="text-purple-400 font-bold">•</span>
+                <span class="font-racing text-xl font-bold text-purple-400 tracking-wider">DRNH</span>
+            </div>
+            <p>© 2026 DRNH Club. All Rights Reserved. Not affiliated with Gameloft.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Eligibility Quiz Logic
+        const quizForm = document.getElementById('quizForm');
+        const quizResult = document.getElementById('quizResult');
+        const resultIcon = document.getElementById('resultIcon');
+        const resultTitle = document.getElementById('resultTitle');
+        const resultDesc = document.getElementById('resultDesc');
+        const resultAction = document.getElementById('resultAction');
+
+        quizForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const gl = parseInt(document.getElementById('quizGl').value, 10);
+            const rep = parseInt(document.getElementById('quizRep').value, 10);
+            const discord = document.querySelector('input[name="quizDiscord"]:checked').value;
+
+            quizResult.classList.remove('hidden', 'bg-emerald-950/40', 'border-emerald-500/50', 'bg-amber-950/40', 'border-amber-500/50', 'bg-red-950/40', 'border-red-500/50');
+
+            if (gl >= 12 && rep >= 30000 && discord === 'yes') {
+                // Perfect Match
+                quizResult.classList.add('bg-emerald-950/40', 'border-emerald-500/50');
+                resultIcon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
+                resultTitle.textContent = '合格！ DRNHへの即時入隊が可能です！';
+                resultTitle.className = 'text-2xl font-black text-emerald-300';
+                resultDesc.textContent = 'あなたのステータスはDRNHの募集条件を十分にクリアしています。ぜひDiscordサーバーより申請してください！';
+                resultAction.innerHTML = `
+                    <a href="#join" class="inline-block px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm uppercase tracking-wider transition">
+                        Discordに参加する
+                    </a>
+                `;
+            } else if (discord === 'yes' && (gl >= 10 || rep >= 15000)) {
+                // Near Match
+                quizResult.classList.add('bg-amber-950/40', 'border-amber-500/50');
+                resultIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>';
+                resultTitle.textContent = '要相談：今後の成長が期待できる枠として検討可能！';
+                resultTitle.className = 'text-2xl font-black text-amber-300';
+                resultDesc.textContent = 'ノルマまであと少しです！モチベーションが高い方は特別育成枠・仮入隊として受け入れ可能な場合があります。一度Discordにてご相談ください。';
+                resultAction.innerHTML = `
+                    <a href="#join" class="inline-block px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm uppercase tracking-wider transition">
+                        Discordで相談してみる
+                    </a>
+                `;
+            } else {
+                // Not Eligible
+                quizResult.classList.add('bg-red-950/40', 'border-red-500/50');
+                resultIcon.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-400"></i>';
+                resultTitle.textContent = '入隊条件まであと少しです';
+                resultTitle.className = 'text-2xl font-black text-red-300';
+                resultDesc.textContent = '申し訳ありません。現時点ではDRNHのノルマ条件を満たしていません。ガレージレベルの向上やRep獲得力を高めて、ぜひ再度挑戦してください！';
+                resultAction.innerHTML = '';
+            }
+
+            quizResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>
